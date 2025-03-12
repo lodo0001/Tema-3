@@ -1,0 +1,270 @@
+/* css til alt */
+body,
+main {
+  background-color: rgb(233, 230, 222);
+}
+
+section {
+  background-color: rgb(249, 252, 252);
+  padding: 2em;
+  margin: 3em;
+}
+
+nav {
+  background-color: rgb(249, 252, 252);
+  margin: 3em;
+}
+
+@font-face {
+  font-family: "shadow";
+  src: url(../emnesite/fonts/Shadows_Into_Light_Two/ShadowsIntoLightTwo-Regular.ttf);
+}
+
+@font-face {
+  font-family: "federo";
+  src: url(../emnesite/fonts/Federo/Federo-Regular.ttf);
+}
+
+h1 {
+  display: grid;
+  grid-column: 1/4;
+}
+
+h1,
+h2,
+nav {
+  font-family: "shadow";
+  color: black;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  font-family: "federo";
+  text-align: center;
+}
+
+p,
+li {
+  font-family: federo;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* css til side 3 */
+.råd {
+  border: 2px;
+  background-color: rgb(103, 164, 157);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 2em;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.grid_1-1 img {
+  width: 100%;
+}
+
+/* css til side 1+2 */
+.frugt {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+}
+
+.frugt img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+
+.hover1:hover {
+  content: url(/emnesite/billeder/jordbær2.png);
+}
+
+.hover2:hover {
+  content: url(/emnesite/billeder/blåbær2.png);
+}
+
+.hover3:hover {
+  content: url(/emnesite/billeder/brombær2.png);
+}
+
+.hover4:hover {
+  content: url(/emnesite/billeder/passionfrugt2.png);
+}
+
+.hover5:hover {
+  content: url(/emnesite/billeder/papaya2.png);
+}
+
+.hover6:hover {
+  content: url(/emnesite/billeder/dragefrugt2.png);
+}
+
+.hover7:hover {
+  content: url(/emnesite/billeder/citron2.png);
+}
+
+.hover8:hover {
+  content: url(/emnesite/billeder/grapefrugt2.png);
+}
+
+.hover9:hover {
+  content: url(/emnesite/billeder/pomelo2.png);
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 6fr, 1fr;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.grid_1-1-1 p {
+  text-align: center;
+}
+
+/* tablet og større skærme */
+@media (width>=700px) {
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+/* tilpas til desktop */
+@media (width>=1200px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* css til menu */
+@media (width>=600px) {
+  div.order {
+    order: -1;
+  }
+
+  .menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    font-family: "shadow";
+    padding: 2em;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:link {
+    color: black;
+  }
+}
+
+/* side 2 */
+
+@media (width>600px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+
+  .grid_1-1-1 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .jordbær {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .blåbær {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .brombær {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+
+  .passion {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  .papaya {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+
+  .drage {
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+
+  .citron {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+
+  .grape {
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+
+  .pomelo {
+    grid-column: 3/4;
+    grid-row: 7/8;
+  }
+
+  /* oversskrift til frugterne */
+  .bær {
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .ekso {
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .citrus {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+}
+
+/* css til side 4 */
+.tomat {
+  text-align: center;
+  padding: 5em;
+}
+
+.tomat img {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
