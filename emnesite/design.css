@@ -7,12 +7,6 @@ main {
 section {
   background-color: rgb(249, 252, 252);
   padding: 2em;
-  margin: 3em;
-}
-
-nav {
-  background-color: rgb(249, 252, 252);
-  margin: 3em;
 }
 
 @font-face {
@@ -28,6 +22,7 @@ nav {
 h1 {
   display: grid;
   grid-column: 1/4;
+  padding-left: 1em;
 }
 
 h1,
@@ -50,12 +45,13 @@ p,
 li {
   font-family: federo;
   color: black;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 /* css til side 3 */
@@ -67,76 +63,80 @@ img {
   padding: 2em;
 }
 
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+#tips {
+  padding-right: 2em;
 }
 
-.grid_1-1 img {
-  width: 100%;
-}
+@media (width>768px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
 
-/* css til side 1+2 */
-.frugt {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 10px;
-}
+  .grid_1-1 img {
+    width: 100%;
+  }
 
-.frugt img {
-  width: 100%;
-  height: auto;
-  transition: 0.5s;
-}
+  /* css til side 1+2 */
 
-.hover1:hover {
-  content: url(/emnesite/billeder/jordbær2.png);
-}
+  hr {
+    margin: 50px 0;
+  }
 
-.hover2:hover {
-  content: url(/emnesite/billeder/blåbær2.png);
-}
+  .frugt {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    overflow: scroll;
+  }
 
-.hover3:hover {
-  content: url(/emnesite/billeder/brombær2.png);
-}
+  .frugt img {
+    width: auto;
+    transition: 0.1s;
+    height: 150px;
+    scroll-snap-align: start;
+    border-radius: 8px;
+  }
 
-.hover4:hover {
-  content: url(/emnesite/billeder/passionfrugt2.png);
-}
+  .hover1:hover {
+    content: url(/emnesite/billeder/jordbær2.webp);
+  }
 
-.hover5:hover {
-  content: url(/emnesite/billeder/papaya2.png);
-}
+  .hover2:hover {
+    content: url(/emnesite/billeder/blåbær2.webp);
+  }
 
-.hover6:hover {
-  content: url(/emnesite/billeder/dragefrugt2.png);
-}
+  .hover3:hover {
+    content: url(/emnesite/billeder/brombær2.webp);
+  }
 
-.hover7:hover {
-  content: url(/emnesite/billeder/citron2.png);
-}
+  .hover4:hover {
+    content: url(/emnesite/billeder/passionfrugt2.webp);
+  }
 
-.hover8:hover {
-  content: url(/emnesite/billeder/grapefrugt2.png);
-}
+  .hover5:hover {
+    content: url(/emnesite/billeder/papaya2.webp);
+  }
 
-.hover9:hover {
-  content: url(/emnesite/billeder/pomelo2.png);
-}
+  .hover6:hover {
+    content: url(/emnesite/billeder/dragefrugt2.webp);
+  }
 
-.grid_1-1-1 {
-  display: grid;
-  grid-template-columns: 6fr, 1fr;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
+  .hover7:hover {
+    content: url(/emnesite/billeder/citron2.webp);
+  }
 
-.grid_1-1-1 p {
-  text-align: center;
+  .hover8:hover {
+    content: url(/emnesite/billeder/grapefrugt2.webp);
+  }
+
+  .hover9:hover {
+    content: url(/emnesite/billeder/grapefrugt2.webp);
+  }
 }
 
 /* tablet og større skærme */
@@ -155,30 +155,6 @@ img {
   }
 }
 
-/* css til menu */
-@media (width>=600px) {
-  div.order {
-    order: -1;
-  }
-
-  .menu {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-    font-family: "shadow";
-    padding: 2em;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  a:link {
-    color: black;
-  }
-}
-
 /* side 2 */
 
 @media (width>600px) {
@@ -187,6 +163,8 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1em;
     row-gap: 1em;
+    height: auto;
+    align-items: center;
   }
 
   .grid_1-1-1 img {
@@ -194,9 +172,15 @@ img {
     height: 100%;
   }
 
+  .grid_1-1-1 p {
+    text-align: center;
+  }
+
   .jordbær {
     grid-column: 1/2;
     grid-row: 3/4;
+    padding-bottom: 2em;
+    width: 250px;
   }
 
   .blåbær {
@@ -259,12 +243,148 @@ img {
 
 /* css til side 4 */
 .tomat {
+  padding: 2em;
   text-align: center;
-  padding: 5em;
 }
 
-.tomat img {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+#vel {
+  text-align: center;
+  margin-top: 8em;
+}
+
+/* css til footer */
+#footer {
+  margin: 5em;
+}
+
+/* css til side8 */
+
+@media (width>600px) {
+  .ggrid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    align-items: center;
+  }
+
+  /* oversskrift til frugterne */
+  .bær {
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .ekso1 {
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .citrus {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+
+  button {
+    background-color: rgb(233, 184, 179);
+    padding: 1em;
+    font-family: "federo";
+  }
+
+  .side8bær1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border: 2px;
+    background-color: rgb(7, 83, 75);
+    border-radius: 20px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8bær2 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border: 2px;
+    background-color: rgb(7, 83, 75);
+    border-radius: 20px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8bær3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    border: 2px;
+    background-color: rgb(7, 83, 75);
+    border-radius: 20px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8ekso1 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    border: 2px;
+    background-color: rgb(103, 164, 157);
+    border-radius: 15px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8ekso2 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    border: 2px;
+    background-color: rgb(103, 164, 157);
+    border-radius: 15px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8ekso3 {
+    grid-column: 3/4;
+    grid-row: 5/6;
+    border: 2px;
+    background-color: rgb(103, 164, 157);
+    border-radius: 15px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8ci1 {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    border: 2px;
+    background-color: rgb(194, 217, 215);
+    border-radius: 10px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8ci2 {
+    grid-column: 2/3;
+    grid-row: 7/8;
+    border: 2px;
+    background-color: rgb(194, 217, 215);
+    border-radius: 10px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .side8ci3 {
+    grid-column: 3/4;
+    grid-row: 7/8;
+    border: 2px;
+    background-color: rgb(194, 217, 215);
+    border-radius: 10px;
+    padding: 2em;
+    height: 650px;
+  }
+
+  .jordbær1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding-bottom: 2em;
+    width: 200px;
+  }
 }
